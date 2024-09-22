@@ -10,7 +10,7 @@ body {
 
 .menu-container{
     color: aliceblue;
-    background-color: #071d08;
+    background-color: #8ab68d;
     text-transform: uppercase;
     height: 100%;
     display: flex;
@@ -26,7 +26,7 @@ body {
     cursor: pointer; 
 }
 
-.lista-itens {
+.lista-itens, .lista-icones {
     text-decoration: none;
     display: flex;
     list-style: none;
@@ -38,7 +38,7 @@ body {
     text-decoration: none;
 }
 
-.lista-itens a img {
+.lista-icones a img {
     width: 30px;
 }
 
@@ -54,23 +54,11 @@ body {
     align-items: center;
 }
 
-.container-left{
-    height: 50hv;
-    width: 30%;
+.box-destaque{
+    width: 80%;
     background-color: #071d08;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.container-right {
-    height: 50hv;
-    width: 70%;
-    background-color: #4CAF50;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-    
