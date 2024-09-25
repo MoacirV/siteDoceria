@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+*::selection {
+    color: #fff;
+    background: var(--cor-principal);
+
+}
+
+:root {
+    --cor-principal: #e65de6;
+    --cor-2: #562c58;
+    --cor-3: #885b97;
+    --cor-4: #e973e9;
+    --cor-5: #cbb2c6;
+}
+
+body {
+    background-color: #e8dcdc;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+}
+header {
+    height: 5vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background: #5B5F97;
+    box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
+    transition: 0.2s;
+}
+
+/*Interruptor Dark e light*/
+
+.interruptor{
+    width: 50px;
+    height: 15px;
+    background-color: #4d4d4d;
+    border-radius: 150px;
+    position: relative;
+}
+
+.interruptor .indicador{
+    width: 25px;
+    height: 15px;
+    background-color: #000000;
+    border-radius: 50%;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: .5s;
+}
+
+.interruptor.dark{
+    background-color: #c3c3c3;
+}
+
+.interruptor.dark .indicador{
+    left: 25px;
+    background-color: #fff;
+}
+
+body.dark{
+    background-color: #523b52;
+}
+
+body.dark h1{
+    color: #000;
+}
+
+/*Fim Interruptor Dark e light*/
+
+.logo {
+    flex: 1; /* Deixa o logo ocupar o espaço à esquerda */
+}
+
+.navbar {
+    display: flex;
+    flex: 2; /* Aumenta a área da navbar */
+    justify-content: center; /* Centraliza os itens */
+}
+
+.navbar a {
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    color: var(--cor-principal);
+}
+
+.right-content {
+    display: flex;
+    flex: 1; /* Alinha os ícones e botões à direita */
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.botoes-entrar {
+    display: flex;
+    gap: 1rem;
+}
+
+
+header .right-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+main {
+    width: 100%; /* Ajuste para 90% ou 80% conforme necessário */
+    max-width: 1200px; /* Limite máximo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
+    
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 40px;
+}
+
+.icons {
+    padding-top: 5px;
+    display: flex;
+    gap: 2rem;
+    cursor: pointer;
+}
+
+
+.icons img {
+    width: 40px;
+    
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    color: var(--cor-4)
+}
+
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+
+.destaque {
+/**/
+}
+
+.text-destaque {
+    position: relative; /* Define o contexto para o botão posicionado */
+    display: flex;
+    justify-content: center; /* Centraliza o texto */
+    align-items: center; /* Alinha verticalmente o texto */
+    height: 40px;
+    padding: 0 2rem;
+}
+
+#text-logo {
+    text-align: center;
+    
+}
+
+.btn-join, .btn-singup {
+    background-color: var(--cor-4);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.home{
+    
+    width: 100%;
+    min-height: 90vh;
+    flex-wrap: wrap;
+    align-items: center;
+    background: var(--cor-5);
+    gap: 1rem;
+}
+
+.home-text{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.home-text a {
+    color:  #fcf9fc;
+
+}
+
+
+/*Divisão do home na metade*/
+.home-img{
+
+    flex: 1 1 17rem ;
+}
+
+.home-img img {
+    width: 1250px;
+    height: 200px;
+    border-radius: 15px;
+    /*animation: animate 3s linear infinite;*/
+}
+
+@keyframes animate{
+    0%{
+        transform: translate(-11px, 0);
+    }
+    50%{
+        transform: translate(-0px, -11px);
+    }
+    100%{
+        transform: translate(-11px, 0);
+    }
+    
+}
+
+.home-text span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--cor-2);
+}
+
+.container-categorias {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os itens */
+    text-align: center;
+    margin: 20px 0; /* Espaço em cima e embaixo */
+}
+
+.linha-categorias {
+    flex: 1; /* Faz a linha ocupar o máximo de espaço disponível */
+    border: none; /* Remove a borda padrão */
+    border-top: 1px solid #6a6666; /* Define a cor e espessura da linha */
+    margin: 0; /* Remove margem vertical para alinhamento */
+}
+
+.palavra-categoria {
+    padding: 0 10px; /* Espaço entre a palavra e a linha */
+    white-space: nowrap; /* Impede a quebra de linha na palavra */
+}
+
+.imgs-categorias{
+    
+    height: 35vh;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+
+}
+.imgs-categorias a{
+    color: #000;
+    
+    
+}
+
+.imgs-categorias img {
+    
+    width: 200px;
+    height: 200px;
+}
+
+.topicos h2{
+    font-weight: normal;
+}

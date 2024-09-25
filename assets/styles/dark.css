@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #212121;
+}
+
+h1{
+    color: #fff;
+}
+
+.interruptor{
+    width: 350px;
+    height: 150px;
+    background-color: #4d4d4d;
+    border-radius: 150px;
+    position: relative;
+}
+
+.interruptor .indicador{
+    width: 150px;
+    height: 150px;
+    background-color: #000;
+    border-radius: 50%;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: .5s;
+}
+
+.interruptor.dark{
+    background-color: #c3c3c3;
+}
+
+.interruptor.dark .indicador{
+    left: 200px;
+    background-color: #fff;
+}
+
+body.dark{
+    background-color: #e4e4e4;
+}
+
+body.dark h1{
+    color: #000;
+}
