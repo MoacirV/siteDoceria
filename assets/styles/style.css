@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,13 +8,12 @@
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 *::selection {
     color: #fff;
     background: var(--cor-principal);
-
 }
 
 :root {
@@ -23,6 +22,7 @@
     --cor-3: #885b97;
     --cor-4: #e973e9;
     --cor-5: #cbb2c6;
+    --cor-6: #CA00EB;
 }
 
 body {
@@ -30,17 +30,16 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* Removido height e flex */
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
+
 header {
-    height: 5vh;
+    height: 60px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -55,9 +54,21 @@ header {
     transition: 0.2s;
 }
 
-/*Interruptor Dark e light*/
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 80px; /* Ajuste este valor conforme a altura do seu cabeçalho */
+    box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
+}
 
-.interruptor{
+section {
+    height: 100vh;
+}
+
+/* Interruptor Dark e light */
+
+.interruptor {
     width: 50px;
     height: 15px;
     background-color: #4d4d4d;
@@ -65,7 +76,7 @@ header {
     position: relative;
 }
 
-.interruptor .indicador{
+.interruptor .indicador {
     width: 25px;
     height: 15px;
     background-color: #000000;
@@ -76,40 +87,46 @@ header {
     transition: .5s;
 }
 
-.interruptor.dark{
+.interruptor.dark {
     background-color: #c3c3c3;
 }
 
-.interruptor.dark .indicador{
+.interruptor.dark .indicador {
     left: 25px;
     background-color: #fff;
 }
 
-body.dark{
+body.dark {
     background-color: #523b52;
 }
 
-body.dark h1{
+body.dark h1 {
     color: #000;
 }
 
-/*Fim Interruptor Dark e light*/
+/* Fim Interruptor Dark e light */
 
 .logo {
-    flex: 1; /* Deixa o logo ocupar o espaço à esquerda */
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
 }
 
 .navbar {
     display: flex;
-    flex: 2; /* Aumenta a área da navbar */
-    justify-content: center; /* Centraliza os itens */
+    flex: 2;
+    justify-content: center;
 }
 
 .navbar a {
     font-size: 1rem;
     padding: 11px 20px;
     color: #fff;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -119,7 +136,7 @@ body.dark h1{
 
 .right-content {
     display: flex;
-    flex: 1; /* Alinha os ícones e botões à direita */
+    flex: 1;
     justify-content: flex-end;
     align-items: center;
     gap: 2rem;
@@ -131,148 +148,96 @@ body.dark h1{
     cursor: pointer;
 }
 
+.icons img {
+    width: 40px;
+}
+
 .botoes-entrar {
     display: flex;
     gap: 1rem;
-}
-
-
-header .right-content {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-main {
-    width: 100%; /* Ajuste para 90% ou 80% conforme necessário */
-    max-width: 1200px; /* Limite máximo */
-    margin: 0 auto; /* Centraliza o conteúdo */
-    box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
-    
-}
-
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img{
-    width: 40px;
-}
-
-.icons {
-    padding-top: 5px;
-    display: flex;
-    gap: 2rem;
-    cursor: pointer;
-}
-
-
-.icons img {
-    width: 40px;
-    
-}
-
-.navbar{
-    display: flex;
-}
-
-.navbar a{
-    font-size: 1rem;
-    padding: 11px 20px;
-    color: #fff;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.navbar a:hover {
-    color: var(--cor-4)
 }
 
 #menu-icon {
     font-size: 24px;
     cursor: pointer;
     z-index: 1001;
-    display: none;
+    display: none; /* Verifique se este menu-icon é necessário */
 }
 
 .destaque {
-/**/
+    /* Estilos para destaque se necessário */
 }
 
 .text-destaque {
-    position: relative; /* Define o contexto para o botão posicionado */
+    position: relative;
     display: flex;
-    justify-content: center; /* Centraliza o texto */
-    align-items: center; /* Alinha verticalmente o texto */
+    justify-content: center;
+    align-items: center;
     height: 40px;
     padding: 0 2rem;
 }
 
 #text-logo {
     text-align: center;
-    
+    font-size: 2rem; /* Ajuste conforme necessário */
 }
 
 .btn-join, .btn-singup {
-    background-color: var(--cor-4);
-    padding: 5px 10px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
+    padding: 7px 16px;
+    border: 2px solid var(--cor-principal);
+    border-radius: 40px;
     color: #fff;
-    font-size: 13px;
-    font-weight: 700;
-    text-decoration: none;
+    background-color: var(--cor-principal);
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
-.home{
-    
+.btn-join:hover, .btn-singup:hover {
+    background-color: var(--cor-4);
+    border-color: var(--cor-4);
+}
+
+.home {
     width: 100%;
-    min-height: 90vh;
     flex-wrap: wrap;
     align-items: center;
     background: var(--cor-5);
     gap: 1rem;
 }
 
-.home-text{
+.home-text {
     margin: 0;
     padding: 0;
     width: 100%;
+    flex: 1 1 17rem;
 }
 
 .home-text a {
-    color:  #fcf9fc;
-
+    color: #fcf9fc;
 }
 
-
-/*Divisão do home na metade*/
-.home-img{
-
-    flex: 1 1 17rem ;
+.home-img {
+    flex: 1 1 17rem;
 }
 
 .home-img img {
-    width: 1250px;
-    height: 200px;
+    width: 100%;
+    max-width: 600px; /* Ajustado para responsividade */
+    height: auto;
     border-radius: 15px;
-    /*animation: animate 3s linear infinite;*/
 }
 
-@keyframes animate{
-    0%{
+@keyframes animate {
+    0% {
         transform: translate(-11px, 0);
     }
-    50%{
+    50% {
         transform: translate(-0px, -11px);
     }
-    100%{
+    100% {
         transform: translate(-11px, 0);
     }
-    
 }
 
 .home-text span {
@@ -284,43 +249,127 @@ main {
 
 .container-categorias {
     display: flex;
-    align-items: center; /* Centraliza verticalmente os itens */
+    align-items: center;
     text-align: center;
-    margin: 20px 0; /* Espaço em cima e embaixo */
+    margin: 20px 0;
 }
 
 .linha-categorias {
-    flex: 1; /* Faz a linha ocupar o máximo de espaço disponível */
-    border: none; /* Remove a borda padrão */
-    border-top: 1px solid #6a6666; /* Define a cor e espessura da linha */
-    margin: 0; /* Remove margem vertical para alinhamento */
+    flex: 1;
+    border: none;
+    border-top: 1px solid #6a6666;
+    margin: 0;
 }
 
 .palavra-categoria {
-    padding: 0 10px; /* Espaço entre a palavra e a linha */
-    white-space: nowrap; /* Impede a quebra de linha na palavra */
+    padding: 0 10px;
+    white-space: nowrap;
 }
 
-.imgs-categorias{
-    
-    height: 35vh;
+.imgs-categorias {
+    height: auto; /* Ajustado para permitir altura dinâmica */
     display: flex; 
     justify-content: space-around;
     align-items: center;
-
+    flex-wrap: wrap; /* Permite que as imagens quebrem linha em telas menores */
 }
-.imgs-categorias a{
+
+.imgs-categorias a {
     color: #000;
-    
-    
 }
 
 .imgs-categorias img {
-    
+    border-radius: 15px;
     width: 200px;
     height: 200px;
 }
 
-.topicos h2{
-    font-weight: normal;
+.topicos h2 {
+    text-align: center;
+    font-weight: 400;
+}
+
+.cabecalho-salgados {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.cabecalho-salgados span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.cabecalho-salgados h1 {
+    font-size: 2rem;
+    color: var(--cor-principal);
+    margin-top: 10px;
+}
+
+.box-salgados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; 
+    flex-wrap: wrap; /*  Responsivo: Permite que os itens quebrem linha em telas menores */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+.itens-salgados {
+
+    font-size: 14px;
+    text-align: center;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 80px 0; 
+}
+
+.itens-salgados img {
+    border-radius: 15px;
+    width: 150px;
+    height: 150px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin: 10px; Opcional, já que usamos gap no container */
+}
+
+.item h3 {
+    font-size: 20px;
+    font-weight: 700; /* Ajustado para melhor legibilidade */
+    margin-top: 10px;
+}
+
+.item span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.add-carrinho {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 10px;
+    padding: 5px 8px;
+    background-color: var(--cor-6);
+    border: 1px solid var(--cor-6);
+    border-radius: 5px; /* Adicionado para melhor aparência */
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.add-carrinho:hover {
+    background-color: var(--cor-4);
+    border-color: var(--cor-4);
+}
+
+.salgados-container article{
+    margin
 }

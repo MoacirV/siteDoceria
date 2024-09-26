@@ -9,6 +9,7 @@
 }
 
 .slides{
+    
     width: 400%;
     height: 400px;
     display: flex;
@@ -24,6 +25,7 @@
 }
 
 .slide img {
+    border-radius: 15px;
     width: 800px;
     min-height: 500px;
 }
