@@ -298,7 +298,6 @@ main {
 }
 
 .itens-salgados img {
-    border-radius: 15px;
     width: 150px;
     height: 150px;
 }
@@ -349,7 +348,6 @@ main {
 }
 
 .add-carrinho img{
-    
     width: 30px;
     height: 30px;
 }
