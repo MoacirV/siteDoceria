@@ -1,0 +1,89 @@
+body{
+    background-color: blanchedalmond;
+}
+
+.pesquisar{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fffdfd;
+    background-color: #a4a4f2;
+    width: 800px;
+    margin: 0 auto 20px;
+    border-radius: 20px;
+    
+    color: #4b4b4b;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Ajuste conforme a necessidade */
+    margin: 0 auto;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px; /* Ajuste conforme o tamanho do ícone */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Garante que o ícone não seja clicável */
+}
+
+.search-icon img {
+    width: 20px; /* Ajuste o tamanho do ícone */
+    height: 20px;
+}
+
+#searchInput{
+
+    padding: 10px 10px 10px 40px;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+}
+
+#searchInput::placeholder {
+    color: #ffffff; /* Cor cinza para o placeholder */
+    opacity: 1;
+}
+
+.pesquisar label{
+    height: 20px;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 330px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    margin: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0,0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 330px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    margin: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
