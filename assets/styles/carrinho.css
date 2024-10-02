@@ -1,0 +1,79 @@
+html, body {
+    height: 100%; /* Garante que a altura total seja de 100% */
+    margin: 0; /* Remove margens padrão */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+}
+
+main {
+    flex: 1; /* Faz com que o main ocupe o espaço restante */
+}
+
+footer {
+    
+    padding: 20px; /* Adiciona espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+}
+
+.box-carrinho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.linha-vertical{
+    border: 1px solid black;
+    width: 1px;
+    height: 100px;
+}
+
+.item-carrinho{
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 40px;
+    background-color: var(--cor-1);
+}
+
+.item-carrinho img{
+    width: 80px;
+}
+
+.img-item-carrinho{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descricao-carrinho{
+    width: 800px;
+    margin-left: 10px;
+}
+
+.valor-item, .qtds-item, .total-item {
+    width: 100px;
+    margin-left: 10px;
+}
+
+.item-carrinho-total{
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 40px;
+    background-color: var(--cor-1);
+}
+
+.item-carrinho-total p{
+    margin-left: 40px;
+    width: 100px;
+}
+

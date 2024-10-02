@@ -1,14 +1,12 @@
-const salgados = [
-    { nome: "Coxinha", preco: "R$ 7.90" },
-    { nome: "Pão de Queijo", preco: "R$ 7.90" },
-    { nome: "Empada de Frango", preco: "R$ 7.90" },
-    { nome: "Pastel de Carne", preco: "R$ 7.90" },
-    { nome: "Quiche de Alho-Poro", preco: "R$ 7.90" },
-    { nome: "Bolinho de Bacalhau", preco: "R$ 7.90" },
-    { nome: "Mini Pizzas", preco: "R$ 7.90" },
-    { nome: "Iscas de Frango Empanadas", preco: "R$ 7.90" },
-    { nome: "Tábua de Frios", preco: "R$ 7.90" },
-    { nome: "Canapés Variados", preco: "R$ 7.90" }
+const itens = [ 
+    { nome: "Coxinha", preco: "R$ 3,00" },
+    { nome: "Coxinha Charque", preco: "R$ 4,00" },
+    { nome: "Coxinha Calabresa", preco: "R$ 4,00" },
+    { nome: "Enroladinho", preco: "R$ 3,00" },
+    { nome: "Risole", preco: "R$ 3,00" },
+    { nome: "Empada Salgada Frango", preco: "R$ 3,00" },
+    { nome: "Empada Salgada Calabresa", preco: "R$ 3,00" },
+    { nome: "Empadão", preco: "R$ 12,00" }
 ];
 
 const cardContainer = document.querySelector(".card-container");
@@ -36,8 +34,8 @@ searchInput.addEventListener("keyup", (e) => {
     if (searchValue === "") {
         cardContainer.style.display = "none"; // Oculta o container se o campo de pesquisa estiver vazio
     } else {
-        const filteredSalgados = salgados.filter(i => i.nome.toLowerCase().includes(searchValue));
-        displayData(filteredSalgados);
+        const filteredItens = itens.filter(i => i.nome.toLowerCase().includes(searchValue));
+        displayData(filteredItens);
     }
 });
 

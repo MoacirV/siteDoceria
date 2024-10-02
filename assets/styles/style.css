@@ -26,6 +26,7 @@
     --cor-5: #cbb2c6;
     --cor-6: #ff0088;
     --cor-7: #917197;
+    --cor-8: #4a52c1;
 }
 
 body {
@@ -63,7 +64,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
-    background: #4a52c1;
+    background: var(--cor-8);
     box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
     transition: 0.2s;
 }
@@ -350,4 +351,56 @@ main {
 .add-carrinho img{
     width: 30px;
     height: 30px;
+}
+
+
+
+
+footer {
+/* Cor de fundo */
+    color: var(--cor-8); /* Cor do texto */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    background-color: var(--cor-8);
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 4px 41px rgba(218, 230, 230, 0.14);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 30px auto 0;
+    max-width: 1200px; /* Ajuste conforme necessário */
+    padding: 0 20px; /* Espaçamento lateral */
+}
+
+.footer-contact, .footer-social {
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-0);
+    font-weight: 700;
+    flex: 1;
+    margin: 10px; /* Espaçamento entre as colunas */
+}
+
+.footer-contact h3, .footer-social h3 {
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.footer-social a {
+    display: block; /* Cada link em uma nova linha */
+    color: var(--cor-0); /* Cor do link */
+    text-decoration: none; /* Sem sublinhado */
+    margin: 5px 0; /* Espaçamento entre os links */
+}
+
+.footer-social a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+.footer-note {
+    margin-top: 20px;
+    font-size: 0.8rem; /* Ajuste o tamanho da fonte */
 }
